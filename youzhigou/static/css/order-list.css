@@ -1,0 +1,27 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+/*接单页面列表项*/
+.weui-swiped-btn.weui-swiped-btn_warn.swipe_btn {
+	color: white;
+	position: absolute;
+	right: -67px;
+	width: 35px;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+}
+
+.weui-swiped-btn.accept_btn {
+	color: white;
+	background: #1AAD19;
+	position: absolute;
+	left: -67px;
+	width: 35px;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+}

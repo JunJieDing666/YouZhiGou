@@ -1,0 +1,7 @@
+#refuse-order, #accept-order, #send-goods, #cancel-order, #query-express {
+    display: none;
+}
+
+#cancel-order {
+    color: #e64340;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta name="detail" value="{{ detail }}"/>
+    <title>订单详情</title>
+    <!--自建样式-->
+    <link rel="stylesheet" href="../static/css/list-detail.css"/>
+    <!--weui样式-->
+    <link rel="stylesheet" href="../static/lib/css/weui.min.css"/>
+    <link rel="stylesheet" href="../static/lib/css/jquery-weui.min.css"/>
+</head>
+<body>
+<div class="weui-form-preview">
+    <div>
+        <div class="weui-form-preview__hd" style="text-align: center;">
+            <em class="weui-form-preview__value">订单详情</em>
+        </div>
+        <div class="weui-form-preview__bd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">商品（中文）</label>
+                <span id="goods_name_cn" class="weui-form-preview__value">电动打蛋机</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">商品（英文）</label>
+                <span id="goods_name_en" class="weui-form-preview__value">电动打蛋机</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">规格</label>
+                <span id="goods_specifications" class="weui-form-preview__value">电动打蛋机</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">数量</label>
+                <span id="goods_num" class="weui-form-preview__value">名字名字名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">买家留言</label>
+                <span id="buyer_msg" class="weui-form-preview__value">名字名字名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">商品链接</label>
+                <span id="ref_url" class="weui-form-preview__value">名字名字名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货人</label>
+                <span id="user_name" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">联系方式</label>
+                <span id="user_phone" class="weui-form-preview__value">18888888</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货地址</label>
+                <span id="user_addr" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货方式</label>
+                <span id="pickup_mode" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">订单状态</label>
+                <span id="order_state" class="weui-form-preview__value">未接单</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <div class="weui-cells weui-cells_form" id="uploader">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="weui-form-preview__ft">
+            <a id="refuse-order" class="weui-form-preview__btn weui-form-preview__btn_default"
+               href="javascript:">拒接</a>
+            <button id="accept-order" type="submit"
+                    class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">接单
+            </button>
+        </div>
+        <div class="weui-form-preview__ft">
+            <button id="send-goods" type="submit"
+                    class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">发货
+            </button>
+        </div>
+        <div class="weui-form-preview__ft">
+            <a id="cancel-order" class="weui-form-preview__btn weui-form-preview__btn_default"
+               href="javascript:">取消订单</a>
+        </div>
+        <div class="weui-form-preview__ft">
+            <button id="query-express" type="submit"
+                    class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">查看物流
+            </button>
+        </div>
+    </div>
+</div>
+<!--第三方库-->
+<script type="text/javascript" src="../static/lib/weui.min.js"></script>
+<script type="text/javascript" src="../static/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/lib/jquery-weui.min.js"></script>
+<!--订单详情-->
+<script type="text/javascript" src="../static/js/list-detail-func.js"></script>
+</body>
+</html>

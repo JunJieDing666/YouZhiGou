@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>物流信息</title>
+    <link rel="stylesheet" href="../static/lib/css/KDNWidget.css"/>
+</head>
+<body>
+<script src="../static/lib/jquery-3.2.1.min.js"></script>
+<script src="../static/lib/KDNWidget.js"></script>
+<script>
+    window.onload = function () {
+        var expressCom, expressCode;
+        var orderId = window.location.href.split("?")[1].split("=")[1];
+        var params = {};
+        params.orderId = orderId;
+        $.ajax({
+            url: "subscribe-express",
+            type: "post",
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            data: JSON.stringify(params),
+            success: function (msg) {
+                expressCom = msg.expressCom;
+                expressCode = msg.expressCode;
+                console.log(msg);
+            },
+            error: function (xhr, textstatus, thrown) {
+
+            },
+            async: false
+        });
+        KDNWidget.run({
+            serviceType: "A",
+            expCode: expressCom,
+            expNo: expressCode,
+        });
+    }
+</script>
+</body>
+</html>

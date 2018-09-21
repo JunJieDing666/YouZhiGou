@@ -1,0 +1,88 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: #F0F0F0;
+}
+
+/*数量加减框*/
+
+.gw_num {
+    width: 85px;
+    line-height: 26px;
+    overflow: hidden;
+}
+
+.gw_num img {
+    display: block;
+    height: 26px;
+    width: 26px;
+    float: left;
+    color: #7A7979;
+    text-align: center;
+    cursor: pointer;
+    background: #F0F0F0;
+}
+
+.gw_num .num {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 30px;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    border: 0;
+}
+
+.gw_num img.add {
+    float: right;
+    border-right: 0;
+    background: #F0F0F0;
+}
+
+/*标签页面*/
+.weui-tab__bd {
+    height: 92%;
+}
+
+.weui-tabbar {
+    height: 8%;
+}
+
+.weui-cells.weui-cells_form {
+    font-size: 15px;
+}
+
+#submit_order {
+    width: 80%;
+}
+
+/*添加联系人*/
+
+#add_contacts {
+    height: 20px;
+}
+
+/*接单页面列表项*/
+
+.weui-swiped-btn.weui-swiped-btn_warn.swipe_btn {
+    color: white;
+    position: absolute;
+    right: -67px;
+    width: 35px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+.weui-swiped-btn.accept_btn {
+    color: white;
+    background: #1AAD19;
+    position: absolute;
+    left: -67px;
+    width: 35px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}

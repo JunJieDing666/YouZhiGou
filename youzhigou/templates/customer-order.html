@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>优值购</title>
+    <!--微信ui-->
+    <link rel="stylesheet" href="../static/lib/css/weui.min.css"/>
+    <link rel="stylesheet" href="../static/lib/css/jquery-weui.min.css"/>
+    <!--为app添加的样式-->
+    <link rel="stylesheet" href="../static/css/app.css"/>
+</head>
+
+<body>
+<div class="good_container">
+    <div class="weui-cells__title">商品信息</div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">*品名(中文)</label></div>
+            <div class="weui-cell__bd">
+                <input id="goods_cn_name" class="weui-input" type="text" placeholder="请输入商品名称"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">品名(英文)</label></div>
+            <div class="weui-cell__bd">
+                <input id="goods_en_name" class="weui-input" type="url" placeholder="请输入商品名称"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">*尺寸规格</label></div>
+            <div class="weui-cell__bd">
+                <input id="specifications" class="weui-input" type="text" placeholder="商品颜色、型号或规格等"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">*购买数量</label></div>
+            <div class="weui-cell__bd">
+            </div>
+            <div class="weui-cell__ft">
+                <div class="gw_num">
+                    <img src="../static/img/minus_cnt.png" class="minus">
+                    <input type="text" value="1" class="num"/>
+                    <img src="../static/img/add_cnt.png" class="add">
+                </div>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">买家留言</label></div>
+            <div class="weui-cell__bd">
+                <input id="msg" class="weui-input" type="text" placeholder="对本次交易的说明"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">商品链接</label></div>
+            <div class="weui-cell__bd">
+                <input id="ref_url" class="weui-input" type="url" placeholder="请输入商品参考链接"/>
+            </div>
+        </div>
+    </div>
+    <div class="weui-cells__title">商品图片上传</div>
+    <div class="weui-cells weui-cells_form" id="uploader">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-uploader">
+                    <div class="weui-uploader__hd">
+                        <p class="weui-uploader__title">图片列表</p>
+                        <div class="weui-uploader__info">
+                            <span id="uploadCount">0</span>/4
+                        </div>
+                    </div>
+                    <div class="weui-uploader__bd">
+                        <ul class="weui-uploader__files" id="uploaderFiles"></ul>
+                        <div class="weui-uploader__input-box">
+                            <input id="uploaderInput" class="weui-uploader__input" type="file"
+                                   accept="image/*" multiple="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-cells__title">收货信息</div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">*收货人</label></div>
+            <div class="weui-cell__bd">
+                <input id="user_name" class="weui-input" type="text" placeholder="请输入姓名"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">*联系电话</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input id="user_phone" class="weui-input" type="tel" placeholder="请输入手机号">
+            </div>
+            <div class="weui-cell__ft">
+                <img id="add_contacts" src="../static/img/add.png"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="" class="weui-label">*详细地址</label></div>
+            <div class="weui-cell__bd">
+                <textarea id="addr_detail" class="weui-textarea" placeholder="请填写详细地址" maxlength="50"
+                          rows="3"></textarea>
+                <div class="weui-textarea-counter"><span id="text_limit">0</span>/50</div>
+            </div>
+        </div>
+        <div class="weui-cells weui-cells_radio">
+            <label class="weui-cell weui-check__label" for="direct_mail">
+                <div class="weui-cell__bd">
+                    <p>直邮</p>
+                </div>
+                <div class="weui-cell__ft">
+                    <input type="radio" class="weui-check" name="radio1" id="direct_mail" checked="checked">
+                    <span class="weui-icon-checked"></span>
+                </div>
+            </label>
+            <label class="weui-cell weui-check__label" for="home_delivery">
+                <div class="weui-cell__bd">
+                    <p>送货上门</p>
+                </div>
+                <div class="weui-cell__ft">
+                    <input type="radio" name="radio1" class="weui-check" id="home_delivery">
+                    <span class="weui-icon-checked"></span>
+                </div>
+            </label>
+            <label class="weui-cell weui-check__label" for="self_pick_up">
+                <div class="weui-cell__bd">
+                    <p>站点自提</p>
+                </div>
+                <div class="weui-cell__ft">
+                    <input type="radio" name="radio1" class="weui-check" id="self_pick_up">
+                    <span class="weui-icon-checked"></span>
+                </div>
+            </label>
+        </div>
+    </div>
+    <br/>
+    <input href="javascript:;" type="submit" id="submit_order" class="weui-btn weui-btn_primary"/>
+    <div class="weui-footer">
+        <br/>
+        <p class="weui-footer__text">Copyright © 2017-2025 YouZhiGou</p>
+    </div>
+</div>
+<!--预览页面-->
+<div class="weui-form-preview" style="display: none;">
+    <div class="weui-cells__title" style="margin-bottom: 15%;">
+        <i class="weui-icon-waiting weui-icon_msg"
+           style="position: relative;left: 50%; -webkit-transform: translate(-50%, 50%);"></i>
+    </div>
+    <div>
+        <div class="weui-form-preview__hd" style="text-align: center;">
+            <em class="weui-form-preview__value">请确认</em>
+        </div>
+        <div class="weui-form-preview__bd">
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">商品</label>
+                <span id="preview_goods" class="weui-form-preview__value">电动打蛋机</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">规格</label>
+                <span id="preview_specifications" class="weui-form-preview__value">电动打蛋机</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">数量</label>
+                <span id="preview_goods_num" class="weui-form-preview__value">名字名字名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货人</label>
+                <span id="preview_user_name" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货地址</label>
+                <span id="preview_addr" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+            <div class="weui-form-preview__item">
+                <label class="weui-form-preview__label">收货方式</label>
+                <span id="preview_pickup_mode" class="weui-form-preview__value">长很长长很长的名字</span>
+            </div>
+        </div>
+        <div class="weui-form-preview__ft">
+            <a id="preview_cancel" class="weui-form-preview__btn weui-form-preview__btn_default"
+               href="javascript:">取消</a>
+            <button id="preview_confirm" type="submit"
+                    class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确定
+            </button>
+        </div>
+    </div>
+</div>
+<!--第三方库-->
+<script type="text/javascript" src="../static/lib/weui.min.js"></script>
+<script type="text/javascript" src="../static/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/lib/jquery-weui.min.js"></script>
+<script type="text/javascript" src="../static/lib/city-picker.min.js"></script>
+<!--全局变量-->
+<script type="text/javascript" src="../static/js/global_var.js"></script>
+<!--下单功能VM-->
+<script type="text/javascript" src="../static/js/customer-order-func.js"></script>
+</body>
+
+</html>

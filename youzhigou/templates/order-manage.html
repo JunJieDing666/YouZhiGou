@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>订单管理</title>
+    <link rel="stylesheet" href="../static/css/order-list.css"/>
+    <!--微信ui-->
+    <link rel="stylesheet" href="../static/lib/css/weui.min.css"/>
+    <link rel="stylesheet" href="../static/lib/css/jquery-weui.min.css"/>
+</head>
+
+<body>
+<div class="weui-tab cache" name="order-manage">
+    <div class="weui-navbar">
+        <a class="weui-navbar__item weui-bar__item--on" href="#nav1">
+            正在进行的订单
+        </a>
+        <a class="weui-navbar__item" href="#nav2">
+            已结束的订单
+        </a>
+    </div>
+    <div class="weui-tab__bd">
+        <div id="nav1" class="weui-tab__bd-item weui-tab__bd-item--active infinite top">
+            <div class="weui-panel weui-panel_access">
+                <div id="underway-orders" class="weui-panel__bd">
+                </div>
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">点击加载更多</span>
+                </div>
+            </div>
+        </div>
+        <div id="nav2" class="weui-tab__bd-item infinite top">
+            <div class="weui-panel weui-panel_access">
+                <div id="completed-orders" class="weui-panel__bd">
+                </div>
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">点击加载更多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--第三方库-->
+<script type="text/javascript" src="../static/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../static/lib/jquery-weui.min.js"></script>
+<!--订单列表-->
+<script type="text/javascript" src="../static/js/global_var.js"></script>
+<script type="text/javascript" src="../static/lib/touchWipe.js"></script>
+<script type="text/javascript" src="../static/js/order-list-func.js"></script>
+</body>
+</html>
